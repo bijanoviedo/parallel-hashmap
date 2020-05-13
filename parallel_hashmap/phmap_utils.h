@@ -134,7 +134,7 @@ public:
 #if defined(PHMAP_USE_ABSL_HASH) && !defined(phmap_fwd_decl_h_guard_)
     namespace absl { template <class T> struct Hash; };
     template <class T> using Hash = absl::Hash<T>;
-#else
+#elif !defined(PHMAP_USE_ABSL_HASH)
 // ---------------------------------------------------------------
 //               phmap::Hash
 // ---------------------------------------------------------------
